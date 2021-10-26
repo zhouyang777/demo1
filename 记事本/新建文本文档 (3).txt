@@ -1,0 +1,124 @@
+<style scoped>
+	.orderlist img {
+		width: 2.32rem;
+		height: 1.60rem;
+	}
+	.orderlist {
+		width: 100%;
+		display: flex;
+		height: 1.8rem;
+		background: #FFFFFF;
+	}
+	figcaption {
+		display: flex;
+		flex-flow: column;
+		justify-content: space-between;
+		padding: 0.2rem 0.15rem;
+    }
+	.discription {
+		font-size: 0.24rem;
+		text-align: left;
+	}
+	.foodprice {
+		color: #ff7900;
+		font-size: 0.26rem;
+	}
+	.buy3 p {
+		margin: 0.3rem 0 0.38rem 0;
+		font-size: 0.26rem;
+	}
+	.buy3 {
+		display: flex;
+	}
+
+	.jian {
+		font-size: 0.36rem;
+		background: #fff;
+		width: 0.5rem;
+		height: 0.5rem;
+		text-align: center;
+		border: 1px solid #e4e4e4;
+		/* margin: 1.2rem 0 0.38rem 0.3rem; */
+	}
+	.shu {
+		font-size: 0.36rem;
+		background: #FFFFFF;
+		width: 0.75rem;
+		height: 0.5rem;
+		text-align: center;
+		border: 1px solid #e4e4e4;
+		/* margin: 1.2rem 0 0.38rem 0.3rem; */
+	}
+
+	.shu input {
+		text-align: center;
+		border: none;
+		border: 1px solid #e4e4e4;
+		background: #ecebeb;
+	}
+	.shuliang {
+		display: flex;
+		border-radius: 0.1rem;
+	}
+	.price {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.shu input[data-v-159e7bd5] {
+		border: none;
+		background: #fff;
+	}
+
+	.settlementnav {
+		width: 100%;
+		position: fixed;
+		bottom: 1.1rem;
+		left: 0;
+		display: flex;
+		font-size: 0.3rem;
+		line-height: 0.97rem;
+		align-items: center;
+		background: #FFFFFF;
+		height: 0.97rem;
+
+	}
+
+	.settlementnav img {
+		width: 0.45rem;
+		height: 0.45rem;
+		margin: 0 0.25rem;
+	}
+
+	.delete,
+	.settlement {
+		height: 0.97rem;
+		width: 1.23rem;
+		color: #FFFFFF;
+		line-height: 0.97rem;
+		text-align: center;
+
+	}
+
+	.delete {
+		background: #fabc29;
+		position: fixed;
+		right: 1.23rem;
+		bottom: 1.1rem;
+	}
+
+	.settlement {
+		background: #ff7900;
+		position: fixed;
+		right: 0;
+		bottom: 1.1rem;
+	}
+
+	.total {
+		color: #ff7900;
+	}
+
+	.settlementall {
+		margin-left: 0.3rem;
+	}
+</style>

@@ -1,0 +1,270 @@
+ <div className="list">
+               <Search />
+                <div className="teas">
+                    <ul className="teas1">
+                        <li className="tea7">
+                            <img src={item.siteUrl} alt="" />
+                            {/* <img src={require('../img/tea7.png') } alt=""/> */}
+                            <p>{item.siteName}</p>
+                            <span className="money">￥299
+                            <img src={teaUrl2} alt="" />
+                                {/* <img src={require('./img/shoppingcar.png') } alt=""/> */}
+                            </span>
+                        </li>
+                        {/* <li className="tea7">
+                            <img src={teaUrl3} alt="" />
+                            
+                            <p>安溪铁观音浓香型特级秋茶</p>
+                            <span className="money">￥299<img src={teaUrl2} alt="" /></span>
+                        </li> 
+                        */}
+                    </ul>
+                    {/* <ul className="teas1">
+                        <li className="tea7">
+                            <img src={teaUrl4} alt="" />
+                            <p>安溪铁观音浓香型特级秋茶</p>
+                            <span className="money">￥299<img src={teaUrl2} alt="" /></span>
+                        </li>
+                        <li className="tea7">
+                            <img src={teaUrl5} alt="" />
+                            <p>安溪铁观音浓香型特级秋茶</p>
+                            <span className="money">￥299<img src={teaUrl2} alt="" /></span>
+                        </li>
+                    </ul> */}
+                </div>
+               
+            </div>
+
+
+
+class List extends React.Component {
+    render() {
+        var siteElements = [];
+        bookArr.forEach((item,index) => {
+            siteElements.push(
+              
+                <div className="teas">
+                <ul className="teas1">
+                            <li className="tea7" key={index}>
+                                <img src={item.siteUrl} alt="" />
+                                {/* <img src={require('../img/tea7.png') } alt=""/> */}
+                                <p>{item.siteName}</p>
+                                <span className="money">￥299
+                             <img src={teaUrl2} alt="" />
+                                    {/* <img src={require('./img/shoppingcar.png') } alt=""/> */}
+                                </span>
+                            </li>
+                    </ul>
+                    </div>
+            )
+        })
+        return (
+
+            <div className="list">
+                <Search />
+                <div className="teas">
+                    <ul className="teas1">
+                        <li className="tea7">
+                            {siteElements}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        )
+    }
+}
+
+
+import React,{ Component} from 'react'
+import { Input,Button,Table, Modal, Space } from 'antd';
+import '../Member/Member.css'
+
+const { Search } = Input;
+  
+const onSearch = value => console.log(value);
+
+const columns = [
+    {
+      title: '编号',
+      dataIndex: 'id',
+      key: 'id',
+      render: text => <a>{text}</a>,
+    },
+    {
+      title: '姓名',
+      dataIndex: 'name',
+      key: 'name',
+    },
+    {
+      title: '权限',
+      dataIndex: 'role',
+      key: 'role',
+    },
+    {
+      title: '操作',
+      key: 'action',
+      render: (text, record) => (
+        <Space size="middle">
+          <Button type="primary">添加</Button>
+          <Button type="default">删除</Button>
+        </Space>
+      ),
+    },
+  ];
+  
+  const data = [
+    {
+      key: '1',
+      name: 'John Brown',
+      id: 32,
+      role: '超级管理员',
+    },
+    {
+      key: '2',
+      name: 'Jim Green',
+      id: 42,
+      role: '管理员',
+    },
+    {
+      key: '3',
+      name: 'Joe Black',
+      id: 32,
+      role: '管理员',
+    },
+  ];
+
+class Member extends Component {
+    state = {
+      isModalVisible:false,
+      handleCancel:false,
+    }
+    showModal = () => {
+      this.setState({
+        isModalVisible:true
+      })
+    };
+  
+    handleOk = () => {
+      console.log("ok")
+    };
+  
+    handleCancel = () => {
+      this.setState({
+        isModalVisible:true
+      })
+    };
+    render(){
+      let {isModalVisible} = this.state
+        return (
+            <div>
+                <div className="search"   id="addMember">
+                <Button type="primary" onClick={this.showModal}>
+                    添加
+                </Button>
+                <Modal title="Basic Modal" visible={isModalVisible} onOk={this.handleOk} onCancel={this.handleCancel}>
+                    <p>aaa</p>
+                </Modal>
+                  <Search placeholder="请输入搜索内容" onSearch={onSearch} enterButton size="default"/>
+                </div>
+                <div>
+                    <Table columns={columns} dataSource={data} />
+                </div>
+            </div>
+        )
+    }
+}
+export default Member;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React, { Component } from 'react';
+import "./Member.css"
+import { Table, Tag, Space, Button, Input } from 'antd';
+import { SearchOutlined ,DeleteOutlined  } from '@ant-design/icons';
+
+class Member extends Component {
+
+    state = {
+        size: '',
+      };
+    
+
+    render() {
+        const { size } = this.state;
+        const dataSource = [
+            {
+                key: '1',
+                name: '胡彦斌',
+                age: 32,
+                address: '西湖区湖底公园1号',
+            },
+            {
+                key: '2',
+                name: '胡彦祖',
+                age: 42,
+                address: '西湖区湖底公园1号',
+            },
+        ];
+
+        const columns = [
+            {
+                title: '姓名',
+                dataIndex: 'name',
+                key: 'name',
+            },
+            {
+                title: '年龄',
+                dataIndex: 'age',
+                key: 'age',
+            },
+            {
+                title: '住址',
+                dataIndex: 'address',
+                key: 'address',
+            },
+            {
+                title: 'Action',
+                key: 'action',
+                render: (text, record) => (
+                    <Space size="middle">
+                        <Button type="primary">添加</Button>
+                        <Button type="primary">编辑</Button>
+                        <Button type="primary" icon={<DeleteOutlined />} size={size} />
+                    </Space>
+                ),
+            },
+        ];
+        return (
+            <div>
+                <div className="search">
+                <Input placeholder="请输入检索内容" />
+                <Button type="primary" icon={<SearchOutlined />}>
+                    Search
+                </Button>
+                </div>
+                
+                <Table dataSource={dataSource} columns={columns} />;
+            </div>
+        );
+    }
+}
+
+export default Member;

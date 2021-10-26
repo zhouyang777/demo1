@@ -1,0 +1,80 @@
+dataDir=/tmp/zookeeper
+
+<!-- <div v-show="current==0">
+				{{classifymenu[current]}}
+				<figure>
+				<div class="kind">
+				<img src="@/assets/images/02.png" class="ad">
+				<figcaption>祁门功夫茶</figcaption>
+				</div>
+				</figure>
+				</div>
+				<div v-show="current==1">{{classifymenu[current]}}</div>
+				<div v-show="current==2">{{classifymenu[current]}}</div>
+				<div v-show="current==3">{{classifymenu[current]}}</div>
+				<div v-show="current==4">{{classifymenu[current]}}</div>
+				<div v-show="current==5">{{classifymenu[current]}}</div>
+				<div v-show="current==6">{{classifymenu[current]}}</div>
+				<div v-show="current==7">{{classifymenu[current]}}</div> -->
+			
+
+
+
+
+
+
+// // var _this = this;
+				// if (_this.editMember.memberName == "" || _this.editMember.memberPass == "") {
+				// 	_this.$message({
+				// 		message: '用户名或密码不能为空',
+				// 		type: "error",
+				// 		duration: '800',
+				// 	})
+				// 	return;
+				// }
+
+				// _this.$axios({
+				// 	url: "/adminUpdate",
+				// 	// headers: {
+				// 	// 	token: JSON.parse(sessionStorage.getItem("member")).token
+				// 	// },
+				// 	method: "post",
+				// 	data: {
+				// 		"id": _this.editMemberObj.id,
+				// 		"memberName": _this.editMemberObj.memberName,
+				// 		"memberPass": _this.editMemberObj.memberPass,
+				// 		"role": _this.editMemberObj.role,
+				// 	},
+				// }).then(function(res) {
+				// 	// alert("qqqq")
+				// 	// console.log(_this.$props.editMemberObj)
+				// 	// console.log(_this.$props.editMemberObj)
+				// 	if (res.data.code == 200) {
+
+				// 		_this.$message({
+				// 			message: '修改成功',
+				// 			type: "success",
+				// 			duration: '800',
+				// 			onClose: function() {
+				// 				//_this.editMember.memberName = "",
+				// 				//_this.editMember.memberPass = "",
+				// 					_this.$parent.editorVisible = false;
+				// 					// console.log(this.$parent.editorVisible)
+				// 					_this.$parent.getMemberList()
+				// 			}
+				// 		});
+				// 	} else if (res.data.code !== 200) {
+				// 		// console.log(res.data.data)
+				// 		_this.$message({
+				// 			message: res.data.info,
+				// 			type: "error",
+				// 			duration: '800',
+				// 			onClose: function() {
+				// 				// _this.editMember.id = "",
+				// 				_this.editMember.memberName = "",
+				// 					_this.editMember.memberPass = ""
+				// 			}
+				// 		})
+				// 	}
+				// })
+	

@@ -1,0 +1,16 @@
+熟悉：HTML5+css3  语义化标签，css3新特性，动画，html5 API（video audio 本地存储 画布 离线存储）
+熟悉：javaScript  ES6  DOM   BOM 
+熟悉：VUE全家桶  @vue/cli   vueRouter  vuex ElementUI和Vant 组件库等相关技术
+熟悉：React   redux  react-router-dom  ant design组件库  
+熟悉：微信小程序开发，uniApp框架
+熟悉：PHP  tp框架  mysql 
+熟悉：ps   ai  web ui 
+常用IDE: Hbuilderx  VScode  微信开发工具  ps AI 等工具
+
+（一）财务报表后台管理系统                                               周期：2周
+   项目介绍：1、这个项目背景/来源，
+   技术方案：vue框架 结合 Elementui 组件库开发，axios数据请求实现增删改查，axios拦截器，Echarts 可视化图表
+   项目总结：项目中遇到的问题？如何解决的？从中学到了什么？
+  
+极客精神？对于写代码要求苛刻，（强迫症）
+喜欢加班写代码，完全听从单位安排，

@@ -1,0 +1,25 @@
+swiper 安装
+
+第一步：cnpm install swiper vue-awesome-swiper@2.6.7 --save
+第二部：
+import 'swiper/swiper-bundle.css'
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
+
+第三步：复制内容到组件中
+ <swiper ref="mySwiper" :options="swiperOptions">
+    <swiper-slide>Slide 1</swiper-slide>
+    <swiper-slide>Slide 2</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+    <swiper-slide>Slide 4</swiper-slide>
+    <swiper-slide>Slide 5</swiper-slide>
+    <div class="swiper-pagination" slot="pagination"></div>
+  </swiper>
+
+
+//当DOM元素 渲染完毕 初始话 swiper
+mounted() {
+			var swiper = new Swiper('.swiper-container', {
+				pagination: '.swiper-pagination',
+				paginationClickable: true,
+			});
+		}
